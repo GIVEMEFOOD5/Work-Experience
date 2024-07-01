@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <script>
+            let url = "https://data.hub.api.metoffice.gov.uk/sitespecific/v0/point/daily?longitude=-4.142657&latitude=50.375458&includeLocationName=true" 
+            let options = { 
+                headers : {
+                    apikey : "eyJ4NXQiOiJOak16WWpreVlUZGlZVGM0TUdSalpEaGtaV1psWWpjME5UTXhORFV4TlRZM1ptRTRZV1JrWWc9PSIsImtpZCI6ImdhdGV3YXlfY2VydGlmaWNhdGVfYWxpYXMiLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJjYjM1ODg3MEBjYWxseXdpdGguYWMudWtAY2FyYm9uLnN1cGVyIiwiYXBwbGljYXRpb24iOnsib3duZXIiOiJjYjM1ODg3MEBjYWxseXdpdGguYWMudWsiLCJ0aWVyUXVvdGFUeXBlIjpudWxsLCJ0aWVyIjoiVW5saW1pdGVkIiwibmFtZSI6InNpdGVfc3BlY2lmaWMtMzEwYmNkM2UtZTNlMy00MzhhLThmYzYtZDVhYTljYTRlNzhhIiwiaWQiOjUwNDksInV1aWQiOiJjOTlhOWI4MS1iYTFkLTQ4M2QtYTA1My00ODNiNDQzMTU4NWMifSwiaXNzIjoiaHR0cHM6XC9cL2FwaS1tYW5hZ2VyLmFwaS1tYW5hZ2VtZW50Lm1ldG9mZmljZS5jbG91ZDo0NDNcL29hdXRoMlwvdG9rZW4iLCJ0aWVySW5mbyI6eyJ3ZGhfc2l0ZV9zcGVjaWZpY19mcmVlIjp7InRpZXJRdW90YVR5cGUiOiJyZXF1ZXN0Q291bnQiLCJncmFwaFFMTWF4Q29tcGxleGl0eSI6MCwiZ3JhcGhRTE1heERlcHRoIjowLCJzdG9wT25RdW90YVJlYWNoIjp0cnVlLCJzcGlrZUFycmVzdExpbWl0IjowLCJzcGlrZUFycmVzdFVuaXQiOiJzZWMifX0sImtleXR5cGUiOiJQUk9EVUNUSU9OIiwic3Vic2NyaWJlZEFQSXMiOlt7InN1YnNjcmliZXJUZW5hbnREb21haW4iOiJjYXJib24uc3VwZXIiLCJuYW1lIjoiU2l0ZVNwZWNpZmljRm9yZWNhc3QiLCJjb250ZXh0IjoiXC9zaXRlc3BlY2lmaWNcL3YwIiwicHVibGlzaGVyIjoiSmFndWFyX0NJIiwidmVyc2lvbiI6InYwIiwic3Vic2NyaXB0aW9uVGllciI6IndkaF9zaXRlX3NwZWNpZmljX2ZyZWUifV0sInRva2VuX3R5cGUiOiJhcGlLZXkiLCJpYXQiOjE3MTk4MjQ5NzEsImp0aSI6IjMwZDNmNWFhLWNmZGUtNGZlOC1iZWJkLWUxZTkxNjdkN2RiOSJ9.hbD41Tx1Eh1-bNwTy6CH2SCvoXR3XbOFEUYqNaKRLXBrVVQNb0rx2b_Wn2DFRzuqISkHtBMSSlv8eXQZ0-C09D9i58TCJMdq7Tdhj0hvkS2-T2ahxotN5OptThpFRQCJwZswd06F88HIsKttS4elB2CygrYHQ8UsYpm4jaEoccsFOy8kfGT-N8iOcRbfJrLk4gMjl-JPbBpG-LW0qalZCJRhRrrROaE7iBET6wvwQoy3ptyhw-Xo4JNZ6pXgUdz8vkCY8fTPUF3qwHGU6Iqa0qnSBoZwqmGLTaZU2FWpRzo2Eb3MmhH9XSgxccJFJ1E-90KUSlQJOsxRHbM94pWuZA=="
+                }
+            }
+            fetch(url, options).then(function(response) {
+                return response.json();
+            }).then(function(data) {
+                const values = ["time", "daySignificantWeatherCode", "dayMaxScreenTemperature", "nightMinScreenTemperature", "midday10MWindSpeed", "dayProbabilityOfRain"];
+                const container = document.getElementById('container');
+
+                for (let i of values){
+                    console.log(`<b>${i}:</b> ${data.features[0].properties.timeSeries[1][i]}`)
+                    const valueBox = document.createElement('div');
+                    valueBox.style.border = '2px solid black';
+                    valueBox.style.margin = '10px';
+                    valueBox.style.padding = '10px';
+                    valueBox.innerHTML = `<b>${i}:</b> ${data.features[0].properties.timeSeries[1][i]}`;
+                    container.appendChild(valueBox);
+                }
+            })
+        </script>
+    </head>
+    <body>
+        <div id="container" style="display: flex; flex-wrap: wrap;">
+            <div style="width: 200px; height: 200px; border: 5px solid black;">
+                <h1>Max Feels Like:</h1> 
+                <p id="stuff"></p>
+            </div>
+        </div>
+    </body>
+</html>
