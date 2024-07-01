@@ -11,7 +11,7 @@
                 return response.json();
             }).then(function(data) {
                 const values = ["time", "daySignificantWeatherCode", "dayMaxScreenTemperature", "nightMinScreenTemperature", "midday10MWindSpeed", "dayProbabilityOfRain"];
-                const container = document.getElementById('container');
+                const container = document.getElementById('box');
 
                 for (let i of values){
                     console.log(`<b>${i}:</b> ${data.features[0].properties.timeSeries[1][i]}`)
@@ -27,6 +27,8 @@
     </head>
     <body>
         <div id="container" style="display: flex; flex-wrap: wrap;">
+        <div id="box" style="display: flex; flex-wrap: wrap;">
+
         </div>
     </body>
 </html>
