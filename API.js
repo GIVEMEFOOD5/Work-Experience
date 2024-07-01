@@ -47,6 +47,8 @@ function newquay() {
             console.log(`<b>${i}:</b> ${data.features[0].properties.timeSeries[1][i]}`)
             const valueBox = document.createElement('div');
             valueBox.style.margin = '10px';
+            valueBox.style.marginLeft = '5px';
+            valueBox.style.marginRight = '5px';
             valueBox.style.border = 'solid';
             valueBox.style.borderColor = 'White';
             valueBox.style.padding = '10px';
