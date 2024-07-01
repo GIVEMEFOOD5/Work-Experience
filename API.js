@@ -15,7 +15,7 @@ function plymouth() {
         for (let i of values){
             console.log(`${i}: ${data.features[0].properties.timeSeries[1].time}`);
             const valueBox = document.createElement('div');
-            valueBox.style.margin = '20px';
+            valueBox.style.margin = '10px';
             valueBox.style.border = 'solid';
             valueBox.style.borderColor = 'White';
             valueBox.style.padding = '10px';
@@ -44,7 +44,7 @@ function newquay() {
         for (let i of values){
             console.log(`<b>${i}:</b> ${data.features[0].properties.timeSeries[1][i]}`)
             const valueBox = document.createElement('div');
-            valueBox.style.margin = '20px';
+            valueBox.style.margin = '10px';
             valueBox.style.border = 'solid';
             valueBox.style.borderColor = 'White';
             valueBox.style.padding = '10px';
