@@ -16,6 +16,7 @@ function plymouth() {
             console.log(`${i}: ${data.features[0].properties.timeSeries[1].time}`);
             const valueBox = document.createElement('div');
             valueBox.style.margin = '20px';
+            valueBox.style.margin = '20px';
             valueBox.innerHTML = `<b>${i}:</b> ${data.features[0].properties.timeSeries[1][i]}`;
             container.appendChild(valueBox);
         }
