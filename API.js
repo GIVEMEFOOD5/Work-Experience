@@ -130,6 +130,43 @@ function stIves() {
 
 stIves()
 
+function userChoice() {
+
+    let lat = document.getElementById("lat").value;
+    let long = document.getElementById("long").value;
+
+    let url = `https://data.hub.api.metoffice.gov.uk/sitespecific/v0/point/hourly?latitude=${lat}&longitude=${long}"`
+    let options = { 
+        headers : {
+            apikey : apiKey
+        }
+    }
+    fetch(url, options).then(function(response) {
+        return response.json();
+    }).then(function(data) {
+
+        const container = document.getElementById('new');
+
+        var time = data.features[0].properties.timeSeries[1].time
+        var dayWeatherCode = data.features[0].properties.timeSeries[1].daySignificantWeatherCode
+        var maxTemp = `${data.features[0].properties.timeSeries[1].dayMaxScreenTemperature}°C`
+        var nightMinTemp = `${data.features[0].properties.timeSeries[1].nightMinScreenTemperature}°C`
+        var windSpeed = data.features[0].properties.timeSeries[1].midday10MWindSpeed
+        var rain = `${data.features[0].properties.timeSeries[1].dayProbabilityOfRain}%`
+
+        windSpeed *= 2.23693629;
+
+        document.getElementById("timeBox").innerText = time;
+        document.getElementById("dayWeatherCodeBox").innerText = getWeatherDescription(dayWeatherCode);
+        document.getElementById("maxTempBox").innerText = maxTemp;
+        document.getElementById("nightMinTempBox").innerText = nightMinTemp;
+        document.getElementById("windSpeedBox").innerText = windSpeed;
+        document.getElementById("rainBox").innerText = rain;
+    })
+}
+
+userChoice()
+
 let url = "https://data.hub.api.metoffice.gov.uk/sitespecific/v0/point/daily?longitude=-4.142657&latitude=50.375458&includeLocationName=true" 
 let options = { 
     headers : {
@@ -238,5 +275,8 @@ document.getElementById("places-list").onchange = () => {
     }
     else if (document.getElementById("places-list").value == "stIves"){
         stIves();
+    }
+    else if (document.getElementById("places-list").value == "userChoice"){
+        userChoice();
     }
 }
