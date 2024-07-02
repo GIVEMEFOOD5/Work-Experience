@@ -1,4 +1,3 @@
-
 function plymouth() {
     let url = "https://data.hub.api.metoffice.gov.uk/sitespecific/v0/point/daily?longitude=-4.142657&latitude=50.375458&includeLocationName=true" 
     let options = { 
@@ -9,22 +8,20 @@ function plymouth() {
     fetch(url, options).then(function(response) {
         return response.json();
     }).then(function(data) {
-        const values = ["time", "daySignificantWeatherCode", "dayMaxScreenTemperature", "nightMinScreenTemperature", "midday10MWindSpeed", "dayProbabilityOfRain"];
-        const container = document.getElementById('ply');
 
-        for (let i of values){
-            console.log(`${i}: ${data.features[0].properties.timeSeries[1].time}`);
-            const valueBox = document.createElement('div');
-            valueBox.style.margin = '10px';
-            valueBox.style.marginLeft = '5px';
-            valueBox.style.marginRight = '5px';
-            valueBox.style.border = 'solid';
-            valueBox.style.borderColor = 'White';
-            valueBox.style.padding = '10px';
-            valueBox.style.borderRadius = '20px';
-            valueBox.innerHTML = `<b>${i}:</b> ${data.features[0].properties.timeSeries[1][i]}`;
-            container.appendChild(valueBox);
-        }
+        var time = data.features[0].properties.timeSeries[1].time
+        var dayWeatherCode = data.features[0].properties.timeSeries[1].daySignificantWeatherCode
+        var maxTemp = data.features[0].properties.timeSeries[1].dayMaxScreenTemperature
+        var nightMinTemp = data.features[0].properties.timeSeries[1].nightMinScreenTemperature
+        var windSpeed = data.features[0].properties.timeSeries[1].midday10MWindSpeed
+        var rain = data.features[0].properties.timeSeries[1].dayProbabilityOfRain
+
+        document.getElementById("timeBox").innerText = time;
+        document.getElementById("dayWeatherCodeBox").innerText = dayWeatherCode;
+        document.getElementById("maxTempBox").innerText = maxTemp;
+        document.getElementById("nightMinTempBox").innerText = nightMinTemp;
+        document.getElementById("windSpeedBox").innerText = windSpeed;
+        document.getElementById("rainBox").innerText = rain;
     })
 }
 
@@ -40,22 +37,21 @@ function newquay() {
     fetch(url, options).then(function(response) {
         return response.json();
     }).then(function(data) {
-        const values = ["time", "daySignificantWeatherCode", "dayMaxScreenTemperature", "nightMinScreenTemperature", "midday10MWindSpeed", "dayProbabilityOfRain"];
-        const container = document.getElementById('new');
 
-        for (let i of values){
-            console.log(`<b>${i}:</b> ${data.features[0].properties.timeSeries[1][i]}`)
-            const valueBox = document.createElement('div');
-            valueBox.style.margin = '10px';
-            valueBox.style.marginLeft = '5px';
-            valueBox.style.marginRight = '5px';
-            valueBox.style.border = 'solid';
-            valueBox.style.borderColor = 'White';
-            valueBox.style.padding = '10px';
-            valueBox.style.borderRadius = '20px';
-            valueBox.innerHTML = `<b>${i}:</b> ${data.features[0].properties.timeSeries[1][i]}`;
-            container.appendChild(valueBox);
-        }
+        var time = data.features[0].properties.timeSeries[1].time
+        var dayWeatherCode = data.features[0].properties.timeSeries[1].daySignificantWeatherCode
+        var maxTemp = data.features[0].properties.timeSeries[1].dayMaxScreenTemperature
+        var nightMinTemp = data.features[0].properties.timeSeries[1].nightMinScreenTemperature
+        var windSpeed = data.features[0].properties.timeSeries[1].midday10MWindSpeed
+        var rain = data.features[0].properties.timeSeries[1].dayProbabilityOfRain
+        
+        document.getElementById("timeBox").innerText = time;
+        document.getElementById("dayWeatherCode").innerText = dayWeatherCode;
+        document.getElementById("maxTemp").innerText = maxTemp;
+        document.getElementById("nightMinTemp").innerText = nightMinTemp;
+        document.getElementById("windSpeed").innerText = windSpeed;
+        document.getElementById("rain").innerText = rain;
+
     })
 }
 
