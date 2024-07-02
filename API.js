@@ -46,12 +46,11 @@ function newquay() {
         var rain = data.features[0].properties.timeSeries[1].dayProbabilityOfRain
         
         document.getElementById("timeBox").innerText = time;
-        document.getElementById("dayWeatherCode").innerText = dayWeatherCode;
-        document.getElementById("maxTemp").innerText = maxTemp;
-        document.getElementById("nightMinTemp").innerText = nightMinTemp;
-        document.getElementById("windSpeed").innerText = windSpeed;
-        document.getElementById("rain").innerText = rain;
-
+        document.getElementById("dayWeatherCodeBox").innerText = dayWeatherCode;
+        document.getElementById("maxTempBox").innerText = maxTemp;
+        document.getElementById("nightMinTempBox").innerText = nightMinTemp;
+        document.getElementById("windSpeedBox").innerText = windSpeed;
+        document.getElementById("rainBox").innerText = rain;
     })
 }
 
