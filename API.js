@@ -1,4 +1,4 @@
-const apiKey = "eyJ4NXQiOiJOak16WWpreVlUZGlZVGM0TUdSalpEaGtaV1psWWpjME5UTXhORFV4TlRZM1ptRTRZV1JrWWc9PSIsImtpZCI6ImdhdGV3YXlfY2VydGlmaWNhdGVfYWxpYXMiLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJjYjM1ODg3MEBjYWxseXdpdGguYWMudWtAY2FyYm9uLnN1cGVyIiwiYXBwbGljYXRpb24iOnsib3duZXIiOiJjYjM1ODg3MEBjYWxseXdpdGguYWMudWsiLCJ0aWVyUXVvdGFUeXBlIjpudWxsLCJ0aWVyIjoiVW5saW1pdGVkIiwibmFtZSI6InNpdGVfc3BlY2lmaWMtMzEwYmNkM2UtZTNlMy00MzhhLThmYzYtZDVhYTljYTRlNzhhIiwiaWQiOjUwNzYsInV1aWQiOiIxMDk3OTdmMC02YmIyLTRiNDUtOTBkNi02NWM4N2ZjMjYxOGUifSwiaXNzIjoiaHR0cHM6XC9cL2FwaS1tYW5hZ2VyLmFwaS1tYW5hZ2VtZW50Lm1ldG9mZmljZS5jbG91ZDo0NDNcL29hdXRoMlwvdG9rZW4iLCJ0aWVySW5mbyI6eyJ3ZGhfc2l0ZV9zcGVjaWZpY19mcmVlIjp7InRpZXJRdW90YVR5cGUiOiJyZXF1ZXN0Q291bnQiLCJncmFwaFFMTWF4Q29tcGxleGl0eSI6MCwiZ3JhcGhRTE1heERlcHRoIjowLCJzdG9wT25RdW90YVJlYWNoIjp0cnVlLCJzcGlrZUFycmVzdExpbWl0IjowLCJzcGlrZUFycmVzdFVuaXQiOiJzZWMifX0sImtleXR5cGUiOiJQUk9EVUNUSU9OIiwic3Vic2NyaWJlZEFQSXMiOlt7InN1YnNjcmliZXJUZW5hbnREb21haW4iOiJjYXJib24uc3VwZXIiLCJuYW1lIjoiU2l0ZVNwZWNpZmljRm9yZWNhc3QiLCJjb250ZXh0IjoiXC9zaXRlc3BlY2lmaWNcL3YwIiwicHVibGlzaGVyIjoiSmFndWFyX0NJIiwidmVyc2lvbiI6InYwIiwic3Vic2NyaXB0aW9uVGllciI6IndkaF9zaXRlX3NwZWNpZmljX2ZyZWUifV0sInRva2VuX3R5cGUiOiJhcGlLZXkiLCJpYXQiOjE3MTk4Mzk5MDksImp0aSI6ImMxNDYzN2Q1LWExNjAtNDQxMS04OTVjLTE1NWJhNTlmNWMzNCJ9.NG8khpdheEjaY_oxbXHpeuGjNYJm2zAwVl4rsrffA9YB3RSMDLFWTdnesjWGonljuUE8RqwXXGLPItdZRC8GvNSizMZMFr9ozYDjiRGO5W1k1SeWoFG_4RtZr-nJDcW1KsHbNvLrBT2utV-k3NCP0a9pZf9dofKyDzK4lF6Femnxcg8k_Uz6FCaIvJtoB7bpbhOXso7g28SdWsm__SA4dvwP9jLYGy2jAFQm-mClolcXpEDXDJeQ_I8Gh_u18kzZW00jdHpvUHNY_3zVzjqOeDsqEL-_0XfXFQbFQoGiUvbdoCpIwzxaHuHwlJIFFsl1hnDbTcJ-NpFiw7rF2jTurQ==";
+const apiKey = "eyJ4NXQiOiJOak16WWpreVlUZGlZVGM0TUdSalpEaGtaV1psWWpjME5UTXhORFV4TlRZM1ptRTRZV1JrWWc9PSIsImtpZCI6ImdhdGV3YXlfY2VydGlmaWNhdGVfYWxpYXMiLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJkYW5pZWxhbGxjb3JuNUBnbWFpbC5jb21AY2FyYm9uLnN1cGVyIiwiYXBwbGljYXRpb24iOnsib3duZXIiOiJkYW5pZWxhbGxjb3JuNUBnbWFpbC5jb20iLCJ0aWVyUXVvdGFUeXBlIjpudWxsLCJ0aWVyIjoiVW5saW1pdGVkIiwibmFtZSI6InNpdGVfc3BlY2lmaWMtODFmYjI2YjEtY2Y5My00ZWNkLWJmNjQtODdkNWRiNTE3Mjk1IiwiaWQiOjUxMTEsInV1aWQiOiIxYjNkZTNhNy1kOWU1LTQyMWEtOTNhOC00NjhmYzEyNzBmMTMifSwiaXNzIjoiaHR0cHM6XC9cL2FwaS1tYW5hZ2VyLmFwaS1tYW5hZ2VtZW50Lm1ldG9mZmljZS5jbG91ZDo0NDNcL29hdXRoMlwvdG9rZW4iLCJ0aWVySW5mbyI6eyJ3ZGhfc2l0ZV9zcGVjaWZpY19mcmVlIjp7InRpZXJRdW90YVR5cGUiOiJyZXF1ZXN0Q291bnQiLCJncmFwaFFMTWF4Q29tcGxleGl0eSI6MCwiZ3JhcGhRTE1heERlcHRoIjowLCJzdG9wT25RdW90YVJlYWNoIjp0cnVlLCJzcGlrZUFycmVzdExpbWl0IjowLCJzcGlrZUFycmVzdFVuaXQiOiJzZWMifX0sImtleXR5cGUiOiJQUk9EVUNUSU9OIiwic3Vic2NyaWJlZEFQSXMiOlt7InN1YnNjcmliZXJUZW5hbnREb21haW4iOiJjYXJib24uc3VwZXIiLCJuYW1lIjoiU2l0ZVNwZWNpZmljRm9yZWNhc3QiLCJjb250ZXh0IjoiXC9zaXRlc3BlY2lmaWNcL3YwIiwicHVibGlzaGVyIjoiSmFndWFyX0NJIiwidmVyc2lvbiI6InYwIiwic3Vic2NyaXB0aW9uVGllciI6IndkaF9zaXRlX3NwZWNpZmljX2ZyZWUifV0sInRva2VuX3R5cGUiOiJhcGlLZXkiLCJpYXQiOjE3MTk5Mjc2MDAsImp0aSI6IjE3NTgxZjI0LTljYmQtNGE4Yy1iZDg4LWRhMzZiM2ZjYzhlYSJ9.QPY22Ju_-rTeYeoeMerO4lTefZMWoCrgpeH0yOqqPGmTi_m0robDAwBUsAF72bLehXEt6rSMK--tvS9A-0hw-DBTXgG_qs1-Qn9kEGpa1lUBVKOJG8cmN_7rMf7dBF-rL9O7Y3xJa4SfjnF1m_P5ZW_4j1CufY5N0jn3w2Tkt8VoT0b50l8t2dOh_NqmKCUgb60cu9U-L_7v0IUEWGrTmubWvtUJd3HSExpPAOcFiAaZvnByBZ8FeUSCJnAmjlAoKCNy5_9rx2hFxtCKi6sPilTZ1h4BqxceOm6sW1NMUTdzY4LYa3H_sCuNa6alFHrkWGyRepJborTrmuv9qk-dIA==";
 
 function plymouth() {
     let url = "https://data.hub.api.metoffice.gov.uk/sitespecific/v0/point/daily?longitude=-4.142657&latitude=50.375458&includeLocationName=true" 
@@ -15,7 +15,7 @@ function plymouth() {
         var dayWeatherCode = data.features[0].properties.timeSeries[1].daySignificantWeatherCode
         var maxTemp = `${data.features[0].properties.timeSeries[1].dayMaxScreenTemperature}°C`
         var nightMinTemp = `${data.features[0].properties.timeSeries[1].nightMinScreenTemperature}°C`
-        var windSpeed = data.features[0].properties.timeSeries[1].midday10MWindSpeed
+        var windSpeed = `${data.features[0].properties.timeSeries[1].midday10MWindSpeed}mph`
         var rain = `${data.features[0].properties.timeSeries[1].dayProbabilityOfRain}%`
 
         windSpeed *= 2.23693629;
@@ -48,7 +48,7 @@ function newquay() {
         var dayWeatherCode = data.features[0].properties.timeSeries[1].daySignificantWeatherCode
         var maxTemp = `${data.features[0].properties.timeSeries[1].dayMaxScreenTemperature}°C`
         var nightMinTemp = `${data.features[0].properties.timeSeries[1].nightMinScreenTemperature}°C`
-        var windSpeed = data.features[0].properties.timeSeries[1].midday10MWindSpeed
+        var windSpeed = `${data.features[0].properties.timeSeries[1].midday10MWindSpeed}mph`
         var rain = `${data.features[0].properties.timeSeries[1].dayProbabilityOfRain}%`
 
         windSpeed *= 2.23693629;
@@ -81,7 +81,7 @@ function carlyonBay() {
         var dayWeatherCode = data.features[0].properties.timeSeries[1].daySignificantWeatherCode
         var maxTemp = `${data.features[0].properties.timeSeries[1].dayMaxScreenTemperature}°C`
         var nightMinTemp = `${data.features[0].properties.timeSeries[1].nightMinScreenTemperature}°C`
-        var windSpeed = data.features[0].properties.timeSeries[1].midday10MWindSpeed
+        var windSpeed = `${data.features[0].properties.timeSeries[1].midday10MWindSpeed}mph`
         var rain = `${data.features[0].properties.timeSeries[1].dayProbabilityOfRain}%`
 
         windSpeed *= 2.23693629;
@@ -114,7 +114,7 @@ function stIves() {
         var dayWeatherCode = data.features[0].properties.timeSeries[1].daySignificantWeatherCode
         var maxTemp = `${data.features[0].properties.timeSeries[1].dayMaxScreenTemperature}°C`
         var nightMinTemp = `${data.features[0].properties.timeSeries[1].nightMinScreenTemperature}°C`
-        var windSpeed = data.features[0].properties.timeSeries[1].midday10MWindSpeed
+        var windSpeed = `${data.features[0].properties.timeSeries[1].midday10MWindSpeed}mph`
         var rain = `${data.features[0].properties.timeSeries[1].dayProbabilityOfRain}%`
 
         windSpeed *= 2.23693629;
@@ -151,7 +151,7 @@ function userChoice() {
         var dayWeatherCode = data.features[0].properties.timeSeries[1].daySignificantWeatherCode
         var maxTemp = `${data.features[0].properties.timeSeries[1].dayMaxScreenTemperature}°C`
         var nightMinTemp = `${data.features[0].properties.timeSeries[1].nightMinScreenTemperature}°C`
-        var windSpeed = data.features[0].properties.timeSeries[1].midday10MWindSpeed
+        var windSpeed = `${data.features[0].properties.timeSeries[1].midday10MWindSpeed}mph`
         var rain = `${data.features[0].properties.timeSeries[1].dayProbabilityOfRain}%`
 
         windSpeed *= 2.23693629;
