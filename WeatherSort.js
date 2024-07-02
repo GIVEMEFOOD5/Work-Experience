@@ -1,34 +1,4 @@
 
-
-// Function to fetch and parse the JSON data
-async function fetchData() {
-    try {
-      // Make the API call
-      const response = await fetch(url,options)
-  
-      // Check if the response is successful
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-  
-      // Parse the JSON response
-      const data = await response.json();
-  
-      
-  
-      // Output specific values from the JSON
-      
-      
-      let code = data.features[0].properties.timeSeries[1].daySignificantWeatherCode;
-      let weatherDescription = getWeatherDescription(code);
-      console.log(`Weather description for code ${code}: ${weatherDescription}`);
-  
-  
-    } catch (error) {
-      console.error('Error fetching data:', error);
-    }
-  }
-  
   let url = "https://data.hub.api.metoffice.gov.uk/sitespecific/v0/point/daily?longitude=-4.142657&latitude=50.375458&includeLocationName=true" 
   let options = { 
       headers : {
