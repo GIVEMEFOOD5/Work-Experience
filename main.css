@@ -14,7 +14,9 @@ h1, h2, h3, h4, h5, h6, p {
     text-decoration: underline;
     margin: auto;
     width: 50%;
-    padding: 10px;
+    padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
     border-style: solid;
     border-radius: 200px;
     border-width: 3px;
@@ -34,6 +36,8 @@ h1, h2, h3, h4, h5, h6, p {
 
 h1 {
     text-decoration: underline;
+
+    font-size: 50px;
 }
 
 .container {
@@ -61,6 +65,7 @@ h1 {
 
 h2 {
     text-decoration: underline;
+    font-size: 40px;
 }
 
 .row {
