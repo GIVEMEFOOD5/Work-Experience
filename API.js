@@ -184,9 +184,6 @@ stIves()
 
 function userChoice() {
 
-    let lat = document.getElementById("lat").value;
-    let long = document.getElementById("long").value;
-
     let url = localStorage.getItem("api-url") || `https://data.hub.api.metoffice.gov.uk/sitespecific/v0/point/daily?longitude=${long}&latitude=${lat}`
     let options = { 
         headers : {
