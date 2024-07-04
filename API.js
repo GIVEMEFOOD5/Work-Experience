@@ -78,7 +78,7 @@ function carlyonBay() {
     fetch(url, options).then(function(response) {
         return response.json();
     }).then(function(data) {
-s
+
         const container = document.getElementById('new');
 
         var time = data.features[0].properties.timeSeries[1].time
@@ -291,3 +291,5 @@ document.getElementById("places-list").onchange = () => {
         userChoice();
     }
 }
+
+document.getElementById("thumb").src = "thumb-up.png";
