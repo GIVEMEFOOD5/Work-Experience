@@ -13,14 +13,13 @@ function plymouth() {
     
         var time = data.features[0].properties.timeSeries[1].time
         var dayWeatherCode = data.features[0].properties.timeSeries[1].daySignificantWeatherCode
-        var maxTemp = `${data.features[0].properties.timeSeries[1].dayMaxScreenTemperature}°C`
-        var nightMinTemp = `${data.features[0].properties.timeSeries[1].nightMinScreenTemperature}°C`
-        var windSpeed = `${data.features[0].properties.timeSeries[1].midday10MWindSpeed}`
-        var rain = `${data.features[0].properties.timeSeries[1].dayProbabilityOfRain}%`
+        var maxTemp = data.features[0].properties.timeSeries[1].dayMaxScreenTemperature
+        var nightMinTemp = data.features[0].properties.timeSeries[1].nightMinScreenTemperature
+        var windSpeed = data.features[0].properties.timeSeries[1].midday10MWindSpeeD
+        var rain = data.features[0].properties.timeSeries[1].dayProbabilityOfRain
 
         windSpeed *= 2.23693629;
         windSpeed = windSpeed.toFixed(2);
-        windSpeed = `${windSpeed}mph`;
 
         if (dayWeatherCode < 13 && maxTemp < 40 && nightMinTemp > 5 && windSpeed < 10 && rain < 50){
             document.getElementById("thumb").src = "thumb-up.png";
@@ -31,10 +30,10 @@ function plymouth() {
     
         document.getElementById("timeBox").innerText = time;
         document.getElementById("dayWeatherCodeBox").innerText = getWeatherDescription(dayWeatherCode);
-        document.getElementById("maxTempBox").innerText = maxTemp;
-        document.getElementById("nightMinTempBox").innerText = nightMinTemp;
-        document.getElementById("windSpeedBox").innerText = windSpeed;
-        document.getElementById("rainBox").innerText = rain;
+        document.getElementById("maxTempBox").innerText = `${maxTemp}°C`;
+        document.getElementById("nightMinTempBox").innerText = `${nightMinTemp}°C`;
+        document.getElementById("windSpeedBox").innerText = `${windSpeed}mph`;
+        document.getElementById("rainBox").innerText = `${rain}%`;
     })
 }
 
@@ -55,14 +54,13 @@ function newquay() {
 
         var time = data.features[0].properties.timeSeries[1].time
         var dayWeatherCode = data.features[0].properties.timeSeries[1].daySignificantWeatherCode
-        var maxTemp = `${data.features[0].properties.timeSeries[1].dayMaxScreenTemperature}°C`
-        var nightMinTemp = `${data.features[0].properties.timeSeries[1].nightMinScreenTemperature}°C`
-        var windSpeed = `${data.features[0].properties.timeSeries[1].midday10MWindSpeed}`
-        var rain = `${data.features[0].properties.timeSeries[1].dayProbabilityOfRain}%`
+        var maxTemp = data.features[0].properties.timeSeries[1].dayMaxScreenTemperature
+        var nightMinTemp = data.features[0].properties.timeSeries[1].nightMinScreenTemperature
+        var windSpeed = data.features[0].properties.timeSeries[1].midday10MWindSpeed
+        var rain = data.features[0].properties.timeSeries[1].dayProbabilityOfRain
 
         windSpeed *= 2.23693629;
         windSpeed = windSpeed.toFixed(2);
-        windSpeed = `${windSpeed}mph`;
 
         if (dayWeatherCode < 13 && maxTemp < 40 && nightMinTemp > 5 && windSpeed < 10 && rain < 50){
             document.getElementById("thumb").src = "thumb-up.png";
@@ -73,10 +71,10 @@ function newquay() {
 
         document.getElementById("timeBox").innerText = time;
         document.getElementById("dayWeatherCodeBox").innerText = getWeatherDescription(dayWeatherCode);
-        document.getElementById("maxTempBox").innerText = maxTemp;
-        document.getElementById("nightMinTempBox").innerText = nightMinTemp;
-        document.getElementById("windSpeedBox").innerText = windSpeed;
-        document.getElementById("rainBox").innerText = rain;
+        document.getElementById("maxTempBox").innerText = `${maxTemp}°C`;
+        document.getElementById("nightMinTempBox").innerText = `${nightMinTemp}°C`;
+        document.getElementById("windSpeedBox").innerText = `${windSpeed}mph`;
+        document.getElementById("rainBox").innerText = `${rain}%`;
     })
 }
 
@@ -93,18 +91,15 @@ function carlyonBay() {
         return response.json();
     }).then(function(data) {
 
-        const container = document.getElementById('new');
-
         var time = data.features[0].properties.timeSeries[1].time
         var dayWeatherCode = data.features[0].properties.timeSeries[1].daySignificantWeatherCode
-        var maxTemp = `${data.features[0].properties.timeSeries[1].dayMaxScreenTemperature}°C`
-        var nightMinTemp = `${data.features[0].properties.timeSeries[1].nightMinScreenTemperature}°C`
-        var windSpeed = `${data.features[0].properties.timeSeries[1].midday10MWindSpeed}`
-        var rain = `${data.features[0].properties.timeSeries[1].dayProbabilityOfRain}%`
+        var maxTemp = data.features[0].properties.timeSeries[1].dayMaxScreenTemperature
+        var nightMinTemp = data.features[0].properties.timeSeries[1].nightMinScreenTemperature
+        var windSpeed = data.features[0].properties.timeSeries[1].midday10MWindSpeed
+        var rain = data.features[0].properties.timeSeries[1].dayProbabilityOfRain
 
         windSpeed *= 2.23693629;
         windSpeed = windSpeed.toFixed(2);
-        windSpeed = `${windSpeed}mph`;
 
         if (dayWeatherCode < 13 && maxTemp < 40 && nightMinTemp > 5 && windSpeed < 10 && rain < 50){
             document.getElementById("thumb").src = "thumb-up.png";
@@ -115,10 +110,10 @@ function carlyonBay() {
 
         document.getElementById("timeBox").innerText = time;
         document.getElementById("dayWeatherCodeBox").innerText = getWeatherDescription(dayWeatherCode);
-        document.getElementById("maxTempBox").innerText = maxTemp;
-        document.getElementById("nightMinTempBox").innerText = nightMinTemp;
-        document.getElementById("windSpeedBox").innerText = windSpeed;
-        document.getElementById("rainBox").innerText = rain;
+        document.getElementById("maxTempBox").innerText = `${maxTemp}°C`;
+        document.getElementById("nightMinTempBox").innerText = `${nightMinTemp}°C`;
+        document.getElementById("windSpeedBox").innerText = `${windSpeed}mph`;
+        document.getElementById("rainBox").innerText = `${rain}%`;
     })
 }
 
@@ -135,18 +130,16 @@ function stIves() {
         return response.json();
     }).then(function(data) {
 
-        const container = document.getElementById('new');
-
         var time = data.features[0].properties.timeSeries[1].time
         var dayWeatherCode = data.features[0].properties.timeSeries[1].daySignificantWeatherCode
-        var maxTemp = `${data.features[0].properties.timeSeries[1].dayMaxScreenTemperature}°C`
-        var nightMinTemp = `${data.features[0].properties.timeSeries[1].nightMinScreenTemperature}°C`
+        var maxTemp = data.features[0].properties.timeSeries[1].dayMaxScreenTemperature
+        var nightMinTemp = data.features[0].properties.timeSeries[1].nightMinScreenTemperature
         var windSpeed = data.features[0].properties.timeSeries[1].midday10MWindSpeed
-        var rain = `${data.features[0].properties.timeSeries[1].dayProbabilityOfRain}%`
+        var rain = data.features[0].properties.timeSeries[1].dayProbabilityOfRain
 
         windSpeed *= 2.23693629;
         windSpeed = windSpeed.toFixed(2);
-        windSpeed = `${windSpeed}mph`;
+
 
         if (dayWeatherCode < 13 && maxTemp < 40 && nightMinTemp > 5 && windSpeed < 10 && rain < 50){
             document.getElementById("thumb").src = "thumb-up.png";
@@ -157,10 +150,10 @@ function stIves() {
 
         document.getElementById("timeBox").innerText = time;
         document.getElementById("dayWeatherCodeBox").innerText = getWeatherDescription(dayWeatherCode);
-        document.getElementById("maxTempBox").innerText = maxTemp;
-        document.getElementById("nightMinTempBox").innerText = nightMinTemp;
-        document.getElementById("windSpeedBox").innerText = windSpeed;
-        document.getElementById("rainBox").innerText = rain;
+        document.getElementById("maxTempBox").innerText = `${maxTemp}°C`;
+        document.getElementById("nightMinTempBox").innerText = `${nightMinTemp}°C`;
+        document.getElementById("windSpeedBox").innerText = `${windSpeed}mph`;
+        document.getElementById("rainBox").innerText = `${rain}%`;
     })
 }
 
@@ -181,18 +174,15 @@ function userChoice() {
         return response.json();
     }).then(function(data) {
 
-        const container = document.getElementById('new');
-
         var time = data.features[0].properties.timeSeries[1].time
         var dayWeatherCode = data.features[0].properties.timeSeries[1].daySignificantWeatherCode
-        var maxTemp = `${data.features[0].properties.timeSeries[1].dayMaxScreenTemperature}°C`
-        var nightMinTemp = `${data.features[0].properties.timeSeries[1].nightMinScreenTemperature}°C`
-        var windSpeed = `${data.features[0].properties.timeSeries[1].midday10MWindSpeed}`
-        var rain = `${data.features[0].properties.timeSeries[1].dayProbabilityOfRain}%`
+        var maxTemp = data.features[0].properties.timeSeries[1].dayMaxScreenTemperature
+        var nightMinTemp = data.features[0].properties.timeSeries[1].nightMinScreenTemperature
+        var windSpeed = data.features[0].properties.timeSeries[1].midday10MWindSpeed
+        var rain = data.features[0].properties.timeSeries[1].dayProbabilityOfRain
 
         windSpeed *= 2.23693629;
         windSpeed = windSpeed.toFixed(2);
-        windSpeed = `${windSpeed}mph`;
 
         if (dayWeatherCode < 13 && maxTemp < 40 && nightMinTemp > 5 && windSpeed < 10 && rain < 50){
             document.getElementById("thumb").src = "thumb-up.png";
@@ -203,10 +193,10 @@ function userChoice() {
 
         document.getElementById("timeBox").innerText = time;
         document.getElementById("dayWeatherCodeBox").innerText = getWeatherDescription(dayWeatherCode);
-        document.getElementById("maxTempBox").innerText = maxTemp;
-        document.getElementById("nightMinTempBox").innerText = nightMinTemp;
-        document.getElementById("windSpeedBox").innerText = windSpeed;
-        document.getElementById("rainBox").innerText = rain;
+        document.getElementById("maxTempBox").innerText = `${maxTemp}°C`;
+        document.getElementById("nightMinTempBox").innerText = `${nightMinTemp}°C`;
+        document.getElementById("windSpeedBox").innerText = `${windSpeed}mph`;
+        document.getElementById("rainBox").innerText = `${rain}%`;
     })
 }
 
