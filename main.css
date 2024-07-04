@@ -139,3 +139,7 @@ input {
 
     filter: hue-rotate(90deg) saturate(200%);
 }
+
+.leaflet-control-container {
+    display: none;
+}
