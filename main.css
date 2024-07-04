@@ -91,8 +91,6 @@ h2 {
     border-style: solid;
     border-radius: 20px;
     border-color: white;
-    padding: 80px;
-    margin: 4vw;
 
     background-color: transparent;
 
@@ -118,13 +116,15 @@ img {
 body {
     background-image: url("ocean.jpg");
     background-repeat: no-repeat;
-    background-position: top center;
     background-attachment: fixed;
-    width: 100%;
+    background-size: cover;
+
+    width: 100vw;
 
     margin: 0;
     padding-top: 5%;
 }
+
 
 input {
     background-color: transparent;
