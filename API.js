@@ -21,6 +21,13 @@ function plymouth() {
         windSpeed *= 2.23693629;
         windSpeed = windSpeed.toFixed(2);
         windSpeed = `${windSpeed}mph`;
+
+        if (dayWeatherCode < 13 && maxTemp < 40 && nightMinTemp > 5 && windSpeed < 10 && rain < 50){
+            document.getElementById("thumb").src = "thumb-up.png";
+        }
+        else{
+            document.getElementById("thumb").src = "thumb-up copy.png";
+        }
     
         document.getElementById("timeBox").innerText = time;
         document.getElementById("dayWeatherCodeBox").innerText = getWeatherDescription(dayWeatherCode);
@@ -57,6 +64,13 @@ function newquay() {
         windSpeed = windSpeed.toFixed(2);
         windSpeed = `${windSpeed}mph`;
 
+        if (dayWeatherCode < 13 && maxTemp < 40 && nightMinTemp > 5 && windSpeed < 10 && rain < 50){
+            document.getElementById("thumb").src = "thumb-up.png";
+        }
+        else{
+            document.getElementById("thumb").src = "thumb-up copy.png";
+        }
+
         document.getElementById("timeBox").innerText = time;
         document.getElementById("dayWeatherCodeBox").innerText = getWeatherDescription(dayWeatherCode);
         document.getElementById("maxTempBox").innerText = maxTemp;
@@ -92,6 +106,13 @@ function carlyonBay() {
         windSpeed = windSpeed.toFixed(2);
         windSpeed = `${windSpeed}mph`;
 
+        if (dayWeatherCode < 13 && maxTemp < 40 && nightMinTemp > 5 && windSpeed < 10 && rain < 50){
+            document.getElementById("thumb").src = "thumb-up.png";
+        }
+        else{
+            document.getElementById("thumb").src = "thumb-up copy.png";
+        }
+
         document.getElementById("timeBox").innerText = time;
         document.getElementById("dayWeatherCodeBox").innerText = getWeatherDescription(dayWeatherCode);
         document.getElementById("maxTempBox").innerText = maxTemp;
@@ -126,6 +147,13 @@ function stIves() {
         windSpeed *= 2.23693629;
         windSpeed = windSpeed.toFixed(2);
         windSpeed = `${windSpeed}mph`;
+
+        if (dayWeatherCode < 13 && maxTemp < 40 && nightMinTemp > 5 && windSpeed < 10 && rain < 50){
+            document.getElementById("thumb").src = "thumb-up.png";
+        }
+        else{
+            document.getElementById("thumb").src = "thumb-up copy.png";
+        }
 
         document.getElementById("timeBox").innerText = time;
         document.getElementById("dayWeatherCodeBox").innerText = getWeatherDescription(dayWeatherCode);
@@ -166,6 +194,12 @@ function userChoice() {
         windSpeed = windSpeed.toFixed(2);
         windSpeed = `${windSpeed}mph`;
 
+        if (dayWeatherCode < 13 && maxTemp < 40 && nightMinTemp > 5 && windSpeed < 10 && rain < 50){
+            document.getElementById("thumb").src = "thumb-up.png";
+        }
+        else{
+            document.getElementById("thumb").src = "thumb-up copy.png";
+        }
 
         document.getElementById("timeBox").innerText = time;
         document.getElementById("dayWeatherCodeBox").innerText = getWeatherDescription(dayWeatherCode);
@@ -190,6 +224,7 @@ fetch(url, options).then(function(response) {
     let code = data.features[0].properties.timeSeries[1].daySignificantWeatherCode;
     let weatherDescription = getWeatherDescription(code);
     console.log(`Weather description for code ${code}: ${weatherDescription}`);
+
 })
 
 // Call the fetchData function
@@ -292,4 +327,3 @@ document.getElementById("places-list").onchange = () => {
     }
 }
 
-document.getElementById("thumb").src = "thumb-up.png";
