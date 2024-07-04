@@ -134,7 +134,7 @@ input {
 }
 
 #map {
-    height: 40vw;
+    height: 30vh;
     width: 50vw;
 
     filter: hue-rotate(90deg) saturate(200%);

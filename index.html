@@ -35,7 +35,7 @@
             <option value="newquay">Newquay</option>
             <option value="carlyonBay">Carlyon Bay</option>
             <option value="stIves">Saint Ives</option>
-            <option value="userChoice">Own Choice</option>
+            <option value="userChoice" id="custom">Own Choice</option>
         </select>
 
         <div class="row">
@@ -93,9 +93,21 @@
         var map = L.map('map').setView([50.375458, -4.142657], 13);
 
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        maxZoom: 19
         }).addTo(map);
+
+        map.on('click', function(e){
+        let lat = e.latlng.lat;
+        let long = e.latlng.lng;
+
+        localStorage.setItem("api-url", `https://data.hub.api.metoffice.gov.uk/sitespecific/v0/point/daily?latitude=${lat}&longitude=${long}`);
+            
+        fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${long}`)
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("custom").innerText = data.city;
+        })
+    });
     </script>
 </body>
 </html>
