@@ -25,11 +25,13 @@ function plymouth() {
 
         if (dayWeatherCode < 13 && maxTemp < 40 && nightMinTemp > 5 && windSpeed < 50 && rain < 50){
             document.getElementById("thumb").src = "thumb-up.png";
+            document.getElementById("thumb").style.rotate = "0deg";
             safety.innerText = "It is safe to go in the water!"
             safety.style.backgroundColor = 'green'
         }
         else{
-            document.getElementById("thumb").src = "thumb-up copy.png";
+            document.getElementById("thumb").src = "thumb-up.png";
+            document.getElementById("thumb").style.rotate = "180deg";
             safety.innerText = "It is NOT safe to go in the water!"
             safety.style.backgroundColor = 'red'
         }
@@ -72,11 +74,13 @@ function newquay() {
 
         if (dayWeatherCode < 13 && maxTemp < 40 && nightMinTemp > 5 && windSpeed < 50 && rain < 50){
             document.getElementById("thumb").src = "thumb-up.png";
+            document.getElementById("thumb").style.rotate = "0deg";
             safety.innerText = "It is safe to go in the water!"
             safety.style.backgroundColor = 'green'
         }
         else{
-            document.getElementById("thumb").src = "thumb-up copy.png";
+            document.getElementById("thumb").src = "thumb-up.png";
+            document.getElementById("thumb").style.rotate = "180deg";
             safety.innerText = "It is NOT safe to go in the water!"
             safety.style.backgroundColor = 'red'
         }
@@ -117,11 +121,13 @@ function carlyonBay() {
 
         if (dayWeatherCode < 13 && maxTemp < 40 && nightMinTemp > 5 && windSpeed < 50 && rain < 50){
             document.getElementById("thumb").src = "thumb-up.png";
+            document.getElementById("thumb").style.rotate = "0deg";
             safety.innerText = "It is safe to go in the water!"
             safety.style.backgroundColor = 'green'
         }
         else{
-            document.getElementById("thumb").src = "thumb-up copy.png";
+            document.getElementById("thumb").src = "thumb-up.png";
+            document.getElementById("thumb").style.rotate = "180deg";
             safety.innerText = "It is NOT safe to go in the water!"
             safety.style.backgroundColor = 'red'
         }
@@ -162,11 +168,13 @@ function stIves() {
 
         if (dayWeatherCode < 13 && maxTemp < 40 && nightMinTemp > 5 && windSpeed < 50 && rain < 50){
             document.getElementById("thumb").src = "thumb-up.png";
+            document.getElementById("thumb").style.rotate = "0deg";
             safety.innerText = "It is safe to go in the water!"
             safety.style.backgroundColor = 'green'
         }
         else{
-            document.getElementById("thumb").src = "thumb-up copy.png";
+            document.getElementById("thumb").src = "thumb-up.png";
+            document.getElementById("thumb").style.rotate = "180deg";
             safety.innerText = "It is NOT safe to go in the water!"
             safety.style.backgroundColor = 'red'
         }
@@ -211,11 +219,13 @@ function userChoice() {
 
         if (dayWeatherCode < 13 && maxTemp < 40 && nightMinTemp > 5 && windSpeed < 50 && rain < 50){
             document.getElementById("thumb").src = "thumb-up.png";
+            document.getElementById("thumb").style.rotate = "0deg";
             safety.innerText = "It is safe to go in the water!"
             safety.style.backgroundColor = 'green'
         }
         else{
-            document.getElementById("thumb").src = "thumb-up copy.png";
+            document.getElementById("thumb").src = "thumb-up.png";
+            document.getElementById("thumb").style.rotate = "180deg";
             safety.innerText = "It is NOT safe to go in the water!"
             safety.style.backgroundColor = 'red'
         }
