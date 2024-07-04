@@ -11,7 +11,7 @@ function plymouth() {
         return response.json();
     }).then(function(data) {
     
-        var time = data.features[0].properties.timeSeries[1].time
+        var time = Date()
         var dayWeatherCode = data.features[0].properties.timeSeries[1].daySignificantWeatherCode
         var maxTemp = data.features[0].properties.timeSeries[1].dayMaxScreenTemperature
         var nightMinTemp = data.features[0].properties.timeSeries[1].nightMinScreenTemperature
@@ -60,7 +60,7 @@ function newquay() {
 
         const container = document.getElementById('new');
 
-        var time = data.features[0].properties.timeSeries[1].time
+        var time = Date()
         var dayWeatherCode = data.features[0].properties.timeSeries[1].daySignificantWeatherCode
         var maxTemp = data.features[0].properties.timeSeries[1].dayMaxScreenTemperature
         var nightMinTemp = data.features[0].properties.timeSeries[1].nightMinScreenTemperature
@@ -107,7 +107,7 @@ function carlyonBay() {
         return response.json();
     }).then(function(data) {
 
-        var time = data.features[0].properties.timeSeries[1].time
+        var time = Date()
         var dayWeatherCode = data.features[0].properties.timeSeries[1].daySignificantWeatherCode
         var maxTemp = data.features[0].properties.timeSeries[1].dayMaxScreenTemperature
         var nightMinTemp = data.features[0].properties.timeSeries[1].nightMinScreenTemperature
@@ -154,7 +154,7 @@ function stIves() {
         return response.json();
     }).then(function(data) {
 
-        var time = data.features[0].properties.timeSeries[1].time
+        var time = Date()
         var dayWeatherCode = data.features[0].properties.timeSeries[1].daySignificantWeatherCode
         var maxTemp = data.features[0].properties.timeSeries[1].dayMaxScreenTemperature
         var nightMinTemp = data.features[0].properties.timeSeries[1].nightMinScreenTemperature
@@ -202,7 +202,7 @@ function userChoice() {
         return response.json();
     }).then(function(data) {
 
-        var time = data.features[0].properties.timeSeries[1].time
+        var time = Date()
         var dayWeatherCode = data.features[0].properties.timeSeries[1].daySignificantWeatherCode
         var maxTemp = data.features[0].properties.timeSeries[1].dayMaxScreenTemperature
         var nightMinTemp = data.features[0].properties.timeSeries[1].nightMinScreenTemperature
