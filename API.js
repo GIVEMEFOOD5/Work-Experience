@@ -302,7 +302,6 @@ document.getElementById("places-list").onchange = () => {
     if (document.getElementById("places-list").value == "plymouth"){
         plymouth();
     }
-
     else if (document.getElementById("places-list").value == "newquay"){
         newquay();
     }
