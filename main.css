@@ -132,3 +132,10 @@ input {
     border: 1px solid white;
     border-radius: 10000vw;
 }
+
+#map {
+    height: 40vw;
+    width: 50vw;
+
+    filter: hue-rotate(90deg) saturate(200%);
+}
