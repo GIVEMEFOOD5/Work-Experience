@@ -1,4 +1,4 @@
-const apiKey = "eyJ4NXQiOiJOak16WWpreVlUZGlZVGM0TUdSalpEaGtaV1psWWpjME5UTXhORFV4TlRZM1ptRTRZV1JrWWc9PSIsImtpZCI6ImdhdGV3YXlfY2VydGlmaWNhdGVfYWxpYXMiLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJkYW5pZWxhbGxjb3JuNUBnbWFpbC5jb21AY2FyYm9uLnN1cGVyIiwiYXBwbGljYXRpb24iOnsib3duZXIiOiJkYW5pZWxhbGxjb3JuNUBnbWFpbC5jb20iLCJ0aWVyUXVvdGFUeXBlIjpudWxsLCJ0aWVyIjoiVW5saW1pdGVkIiwibmFtZSI6InNpdGVfc3BlY2lmaWMtODFmYjI2YjEtY2Y5My00ZWNkLWJmNjQtODdkNWRiNTE3Mjk1IiwiaWQiOjUxMTIsInV1aWQiOiI3NWEyYzUzYS1jYTUxLTQyYmItYTA0Ni1mNWJjNWRkNzNjYzMifSwiaXNzIjoiaHR0cHM6XC9cL2FwaS1tYW5hZ2VyLmFwaS1tYW5hZ2VtZW50Lm1ldG9mZmljZS5jbG91ZDo0NDNcL29hdXRoMlwvdG9rZW4iLCJ0aWVySW5mbyI6eyJ3ZGhfc2l0ZV9zcGVjaWZpY19mcmVlIjp7InRpZXJRdW90YVR5cGUiOiJyZXF1ZXN0Q291bnQiLCJncmFwaFFMTWF4Q29tcGxleGl0eSI6MCwiZ3JhcGhRTE1heERlcHRoIjowLCJzdG9wT25RdW90YVJlYWNoIjp0cnVlLCJzcGlrZUFycmVzdExpbWl0IjowLCJzcGlrZUFycmVzdFVuaXQiOiJzZWMifX0sImtleXR5cGUiOiJQUk9EVUNUSU9OIiwic3Vic2NyaWJlZEFQSXMiOlt7InN1YnNjcmliZXJUZW5hbnREb21haW4iOiJjYXJib24uc3VwZXIiLCJuYW1lIjoiU2l0ZVNwZWNpZmljRm9yZWNhc3QiLCJjb250ZXh0IjoiXC9zaXRlc3BlY2lmaWNcL3YwIiwicHVibGlzaGVyIjoiSmFndWFyX0NJIiwidmVyc2lvbiI6InYwIiwic3Vic2NyaXB0aW9uVGllciI6IndkaF9zaXRlX3NwZWNpZmljX2ZyZWUifV0sInRva2VuX3R5cGUiOiJhcGlLZXkiLCJpYXQiOjE3MTk5Mjg1MDYsImp0aSI6IjQ4ODI4NjQ1LWY4ZmYtNDg0MC04ZGY3LTFmN2QyNGYxYWExYiJ9.Bk2PGA7S84X-af-AECxtrVnCEfipjx26oa0ezOIo1lXW_2zni_PJP68gBVxKhXgrzSKNrHJzZYM6NPvuZmJ2cXTrkkxwqqBAvocOozt22g548Y3EiUbuWV6US3YFY-t6HKOuu4BUriV_PgTfh6sikyIMpEk9oQ1IBxoiU2Kp4fLtfPVlCIT9RRGXZJHTYlptQc-mLBkrQnaXxZ8h8VGevzyLMZLNjmoULX87jgCtD0_ICXWVAbjAZoMmJAUYhTgyrVkdk-8hrMyDdTlsuI2M-ZUEX3_sN_fyc-5v76nh80hCbzHcfrDReGIFuzZdSPIlCKG3dAQsPVxAFHCSuEtOAA==";
+const apiKey = "eyJ4NXQiOiJOak16WWpreVlUZGlZVGM0TUdSalpEaGtaV1psWWpjME5UTXhORFV4TlRZM1ptRTRZV1JrWWc9PSIsImtpZCI6ImdhdGV3YXlfY2VydGlmaWNhdGVfYWxpYXMiLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJiZG9nYnJpZ2h0QGdtYWlsLmNvbUBjYXJib24uc3VwZXIiLCJhcHBsaWNhdGlvbiI6eyJvd25lciI6ImJkb2dicmlnaHRAZ21haWwuY29tIiwidGllclF1b3RhVHlwZSI6bnVsbCwidGllciI6IlVubGltaXRlZCIsIm5hbWUiOiJzaXRlX3NwZWNpZmljLWI0YzEzZWExLWQwODQtNDk1Ni1iMWY3LWFlYThjMDc2M2RlMCIsImlkIjo1MTYwLCJ1dWlkIjoiYTQ0YTMxY2ItMmM4Yi00MTgyLWE4N2ItZjJlODBkYWEyYmI5In0sImlzcyI6Imh0dHBzOlwvXC9hcGktbWFuYWdlci5hcGktbWFuYWdlbWVudC5tZXRvZmZpY2UuY2xvdWQ6NDQzXC9vYXV0aDJcL3Rva2VuIiwidGllckluZm8iOnsid2RoX3NpdGVfc3BlY2lmaWNfZnJlZSI6eyJ0aWVyUXVvdGFUeXBlIjoicmVxdWVzdENvdW50IiwiZ3JhcGhRTE1heENvbXBsZXhpdHkiOjAsImdyYXBoUUxNYXhEZXB0aCI6MCwic3RvcE9uUXVvdGFSZWFjaCI6dHJ1ZSwic3Bpa2VBcnJlc3RMaW1pdCI6MCwic3Bpa2VBcnJlc3RVbml0Ijoic2VjIn19LCJrZXl0eXBlIjoiUFJPRFVDVElPTiIsInN1YnNjcmliZWRBUElzIjpbeyJzdWJzY3JpYmVyVGVuYW50RG9tYWluIjoiY2FyYm9uLnN1cGVyIiwibmFtZSI6IlNpdGVTcGVjaWZpY0ZvcmVjYXN0IiwiY29udGV4dCI6Ilwvc2l0ZXNwZWNpZmljXC92MCIsInB1Ymxpc2hlciI6IkphZ3Vhcl9DSSIsInZlcnNpb24iOiJ2MCIsInN1YnNjcmlwdGlvblRpZXIiOiJ3ZGhfc2l0ZV9zcGVjaWZpY19mcmVlIn1dLCJ0b2tlbl90eXBlIjoiYXBpS2V5IiwiaWF0IjoxNzIwMDk1Njc2LCJqdGkiOiJiMDAwNTYyZS1hZmNiLTQ5OTMtYmVmNi0yNzM1NWRiYzhiMmMifQ==.Xj4ZMFCeHoaow2T4CkdyA6gkFpWv1xyhBMhVrnNRwvJaNVWrFTll9VkcnJYwWEgW-MKJ6NdxXGZYYCVind_GhMav9GBmgnkEi0DPUpXF3RDXZPI-1J3SsjY-7JfbDFxWB9Wd0wUo-D6ndKOrfSOHxyYajjnX2ki73Brwxp47Yc4F_sixABpZ1W48r4MsLorBXKrCG_TIo_caaknUp-y0JJ9d_208RwinYJDJRf-gVobisc-vkxMOb00suK0vQhIXf1Ee-v7g8U71tXSySHUPFdArh9oVpB6Vba_fCH2SvEBntDZWcvHKhJFnSYUZv1nlIdRjYddUjTA4cAOzTPInEQ==";
 
 function plymouth() {
     let url = "https://data.hub.api.metoffice.gov.uk/sitespecific/v0/point/daily?longitude=-4.142657&latitude=50.375458&includeLocationName=true" 
@@ -15,17 +15,23 @@ function plymouth() {
         var dayWeatherCode = data.features[0].properties.timeSeries[1].daySignificantWeatherCode
         var maxTemp = data.features[0].properties.timeSeries[1].dayMaxScreenTemperature
         var nightMinTemp = data.features[0].properties.timeSeries[1].nightMinScreenTemperature
-        var windSpeed = data.features[0].properties.timeSeries[1].midday10MWindSpeeD
+        var windSpeed = data.features[0].properties.timeSeries[1].midday10MWindSpeed
         var rain = data.features[0].properties.timeSeries[1].dayProbabilityOfRain
 
         windSpeed *= 2.23693629;
         windSpeed = windSpeed.toFixed(2);
 
-        if (dayWeatherCode < 13 && maxTemp < 40 && nightMinTemp > 5 && windSpeed < 10 && rain < 50){
+        let safety = document.getElementById("safe");
+
+        if (dayWeatherCode < 13 && maxTemp < 40 && nightMinTemp > 5 && windSpeed < 50 && rain < 50){
             document.getElementById("thumb").src = "thumb-up.png";
+            safety.innerText = "It is safe to go in the water!"
+            safety.style.backgroundColor = 'green'
         }
         else{
             document.getElementById("thumb").src = "thumb-up copy.png";
+            safety.innerText = "It is NOT safe to go in the water!"
+            safety.style.backgroundColor = 'red'
         }
     
         document.getElementById("timeBox").innerText = time;
@@ -62,11 +68,17 @@ function newquay() {
         windSpeed *= 2.23693629;
         windSpeed = windSpeed.toFixed(2);
 
-        if (dayWeatherCode < 13 && maxTemp < 40 && nightMinTemp > 5 && windSpeed < 10 && rain < 50){
+        let safety = document.getElementById("safe");
+
+        if (dayWeatherCode < 13 && maxTemp < 40 && nightMinTemp > 5 && windSpeed < 50 && rain < 50){
             document.getElementById("thumb").src = "thumb-up.png";
+            safety.innerText = "It is safe to go in the water!"
+            safety.style.backgroundColor = 'green'
         }
         else{
             document.getElementById("thumb").src = "thumb-up copy.png";
+            safety.innerText = "It is NOT safe to go in the water!"
+            safety.style.backgroundColor = 'red'
         }
 
         document.getElementById("timeBox").innerText = time;
@@ -101,11 +113,17 @@ function carlyonBay() {
         windSpeed *= 2.23693629;
         windSpeed = windSpeed.toFixed(2);
 
-        if (dayWeatherCode < 13 && maxTemp < 40 && nightMinTemp > 5 && windSpeed < 10 && rain < 50){
+        let safety = document.getElementById("safe");
+
+        if (dayWeatherCode < 13 && maxTemp < 40 && nightMinTemp > 5 && windSpeed < 50 && rain < 50){
             document.getElementById("thumb").src = "thumb-up.png";
+            safety.innerText = "It is safe to go in the water!"
+            safety.style.backgroundColor = 'green'
         }
         else{
             document.getElementById("thumb").src = "thumb-up copy.png";
+            safety.innerText = "It is NOT safe to go in the water!"
+            safety.style.backgroundColor = 'red'
         }
 
         document.getElementById("timeBox").innerText = time;
@@ -140,12 +158,17 @@ function stIves() {
         windSpeed *= 2.23693629;
         windSpeed = windSpeed.toFixed(2);
 
+        let safety = document.getElementById("safe");
 
-        if (dayWeatherCode < 13 && maxTemp < 40 && nightMinTemp > 5 && windSpeed < 10 && rain < 50){
+        if (dayWeatherCode < 13 && maxTemp < 40 && nightMinTemp > 5 && windSpeed < 50 && rain < 50){
             document.getElementById("thumb").src = "thumb-up.png";
+            safety.innerText = "It is safe to go in the water!"
+            safety.style.backgroundColor = 'green'
         }
         else{
             document.getElementById("thumb").src = "thumb-up copy.png";
+            safety.innerText = "It is NOT safe to go in the water!"
+            safety.style.backgroundColor = 'red'
         }
 
         document.getElementById("timeBox").innerText = time;
@@ -184,11 +207,17 @@ function userChoice() {
         windSpeed *= 2.23693629;
         windSpeed = windSpeed.toFixed(2);
 
-        if (dayWeatherCode < 13 && maxTemp < 40 && nightMinTemp > 5 && windSpeed < 10 && rain < 50){
+        let safety = document.getElementById("safe");
+
+        if (dayWeatherCode < 13 && maxTemp < 40 && nightMinTemp > 5 && windSpeed < 50 && rain < 50){
             document.getElementById("thumb").src = "thumb-up.png";
+            safety.innerText = "It is safe to go in the water!"
+            safety.style.backgroundColor = 'green'
         }
         else{
             document.getElementById("thumb").src = "thumb-up copy.png";
+            safety.innerText = "It is NOT safe to go in the water!"
+            safety.style.backgroundColor = 'red'
         }
 
         document.getElementById("timeBox").innerText = time;
@@ -315,4 +344,3 @@ document.getElementById("places-list").onchange = () => {
         userChoice();
     }
 }
-
